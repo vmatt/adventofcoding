@@ -1,5 +1,5 @@
 import re
-file = open("input.txt", 'r').read()
+file = open("02/input.txt", 'r').read()
 file = file.split("\n")
 
 ##pt 1

@@ -1,5 +1,5 @@
 import re
-file = open("input.txt", 'r').read()
+file = open("01/input.txt", 'r').read()
 file = file.split("\n")
 
 # seats = [x[:] for x in [["O"] * 8] * 128]
@@ -15,7 +15,7 @@ for i,row in enumerate(file):
 print(inc)
 
 
-file = open("input.txt", 'r').read()
+file = open("01/input.txt", 'r').read()
 f = file.split("\n")
 f = [int(s) for s in f]
 

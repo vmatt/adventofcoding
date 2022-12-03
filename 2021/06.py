@@ -1,4 +1,4 @@
-file = open("input.txt",'r').read()
+file = open("06/input.txt", 'r').read()
 file = file.split("\n")
 
 # +1 for buffer

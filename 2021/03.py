@@ -1,5 +1,5 @@
 from copy import deepcopy
-file = open("input.txt", 'r').read()
+file = open("03/input.txt", 'r').read()
 file = file.split("\n")
 
 ##pt 1
