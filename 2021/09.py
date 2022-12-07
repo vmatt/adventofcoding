@@ -34,8 +34,6 @@ basin_id = 0
 for y, row in enumerate(heatmap):
     for x, c in enumerate(row):
         c = int(c)
-        if x == 0 and y ==36:
-            print()
         top=get_adj('top', y, x)
         left=get_adj('left', y, x)
         right=get_adj('right', y, x)
@@ -51,6 +49,7 @@ for y, row in enumerate(heatmap):
 print("pt1:", pt1)
 print()
 
+# part 2
 basin_dict = {x:0 for x in range(len(basins))}
 
 visited_nodes = set()
@@ -76,7 +75,7 @@ def recursive_scan(x,y):
     return size+1
 
 
-kek = []
+basin_sizes = []
 for i,b in enumerate(basins):
     original_x = b[0]
     original_y = b[1]
@@ -85,15 +84,15 @@ for i,b in enumerate(basins):
     x = deepcopy(original_x)
     y = deepcopy(original_y)
     size = recursive_scan(x,y)
-    kek.append(size)
+    basin_sizes.append(size)
 
-kek = sorted(kek,reverse=True)
+basin_sizes = sorted(basin_sizes,reverse=True)
 
-na = 1
-for i in kek[:3]:
-    na = na*i
+top_3_basins = 1
+for i in basin_sizes[:3]:
+    top_3_basins = top_3_basins*i
 
-print(na)
+print(top_3_basins)
 
 
 
