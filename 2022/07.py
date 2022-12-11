@@ -20,8 +20,7 @@ for i,cmd in enumerate(cmds):
             for i in range(1,len(current_path)+1):
                 joined_path = "/".join(current_path[0:i])
                 try:
-                    directory_sizes[joined_path]+= file_size
-
+                    directory_sizes[joined_path] += file_size
                 except KeyError:
                     directory_sizes[joined_path] = file_size
     if cmd.startswith("$ "):
@@ -43,7 +42,7 @@ for i,cmd in enumerate(cmds):
 
 under_100_000 = 0
 # total_usage = sum(directory_sizes.values())
-for dir, size in directory_sizes.items():
+for size in directory_sizes.values():
     if size <= 100_000:
         under_100_000+=size
 
